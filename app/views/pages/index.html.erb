@@ -1,8 +1,11 @@
 <h2>I AMA Homepage</h2>
 
+<%= will_paginate @links %>
+
 <ul>
 	<% @links.each do |link| %>
 		<li><a href=http://"<%= link.url %>" target=_blank><%= link.title %></a>
+		<%= link_to "comments", link %>
 	<% end %>
 </ul>	
 
