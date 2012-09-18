@@ -4,6 +4,8 @@ RedditOnRails::Application.routes.draw do
 
   resources :pages
   resources :links
+  resources :comments
+  # resources :comments, :only => [:create]  # if we want to limit to only creates route
   
   root :to => "pages#index"
   # The priority is based upon order of creation:
